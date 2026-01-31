@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    .settings-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    
+    .string-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .string-text {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    
+    .button {
+      padding: 8px 16px;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .button:hover {
+      background: #0052a3;
+    }
+    
+    .button-danger {
+      background: #dc3545;
+    }
+    
+    .button-danger:hover {
+      background: #c82333;
+    }
+    
+    .button-secondary {
+      background: #6c757d;
+    }
+    
+    .button-secondary:hover {
+      background: #5a6268;
+    }
+    
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    #strings-list {
+      margin-top: 20px;
+    }
+    
+    .preview {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .preview span {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quick Insert Settings</h1>
+  
+  <div class="settings-section">
+    <div class="form-group">
+      <label for="new-string">New Text String:</label>
+      <textarea id="new-string" placeholder="Enter text for quick pasting"></textarea>
+    </div>
+    
+    <button id="add-string" class="button">Add String</button>
+  </div>
+  
+  <div class="settings-section">
+    <div class="form-group">
+      <label for="max-length">Maximum Display Length in Menu:</label>
+      <input type="number" id="max-length" min="10" max="200" value="50">
+      <div class="preview">Example: <span id="length-preview"></span></div>
+    </div>
+  </div>
+  
+  <div class="settings-section">
+    <h3>Saved Strings</h3>
+    <div id="strings-list"></div>
+  </div>
+  
+  <div class="buttons">
+    <button id="save" class="button">Save Settings</button>
+    <button id="reset" class="button button-danger">Reset All</button>
+    <button id="import" class="button button-secondary">Import</button>
+    <button id="export" class="button button-secondary">Export</button>
+  </div>
+  
+  <script src="settings.js"></script>
+</body>
+</html>

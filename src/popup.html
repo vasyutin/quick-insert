@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .menu-item {
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .menu-item:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .menu-item.settings {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      border-top: 2px solid #ddd;
+    }
+    
+    .empty-message {
+      padding: 20px;
+      text-align: center;
+      color: #888;
+      font-style: italic;
+    }
+    
+    .header {
+      padding: 10px;
+      background: #f9f9f9;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Quick Insert</div>
+  <div id="menu-items"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
